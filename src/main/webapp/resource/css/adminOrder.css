@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: 100vh; /* Giới hạn chiều cao của body */
+    overflow: hidden;
+}
+
+.order-main-container {
+    display: flex;
+    height: 100%; /* Chiều cao container chính sẽ chiếm toàn bộ chiều cao còn lại của body */
+    width: 100%;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    flex: 1;
+    padding: 20px 20px 90px 20px;
+    overflow-y: auto; /* Chỉ cuộn trong phần nội dung nếu quá dài */
+}
+
+.order-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Tăng khoảng cách giữa các item */
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.order-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(25% - 15px); /* 4 items per row */
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.background-red {
+    background-color: #f8d7da; /* Màu đỏ nhạt cho đơn hàng chờ */
+}
+
+.background-yellow {
+    background-color: #fff3cd; /* Màu vàng nhạt cho đơn hàng đã xác nhận */
+}
+
+.order-details {
+    margin-bottom: 10px;
+}
+
+.order-details p {
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.order-details p span {
+    font-weight: normal;
+}
+
+.order-item table {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.order-item table th,
+.order-item table td {
+    padding: 5px;
+    text-align: left;
+}
+
+.order-item button {
+    background-color: #007bff; /* Màu xanh dương */
+    color: #fff;
+    border: none;
+    padding: 15px 20px; /* Tăng kích thước nút */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px; /* Tăng kích thước font chữ */
+    max-width: 100px;
+}
+
+.order-item button:hover {
+    background-color: #0056b3; /* Màu xanh dương đậm hơn khi hover */
+}
+
+.order-item button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Màu đỏ cho nút hủy */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Màu đỏ đậm hơn khi hover */
+}
+
+.order-actions {
+    display: flex; /* Đặt các nút trên cùng một hàng */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.order-actions form {
+    flex: 1; /* Để các nút có kích cỡ bằng nhau */
+}
+
+.order-actions button {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của form chứa nó */
+    padding: 10px 0; /* Để nút có kích thước phù hợp */
+    font-size: 16px; /* Để kích thước chữ đồng nhất */
+}

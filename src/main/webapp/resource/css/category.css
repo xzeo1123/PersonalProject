@@ -1,0 +1,243 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.category-main-container {
+    display: flex;
+    height: calc(100% - 90px); /* Adjust height to fit content */
+    width: 100%;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    flex: 1;
+}
+
+.category-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.add-btn i {
+    margin-right: 10px;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+	width: 38px;
+	height: 38px;
+	border-radius: 5px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.category-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(25% - 10px); /* 25% width minus gap */
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    height: 180px;
+}
+
+/* Background colors for item statuses */
+.background-green {
+    background-color: #d4edda; /* Light green */
+}
+
+.background-red {
+    background-color: #f8d7da; /* Light red */
+}
+
+/* Ensure item-actions hides properly when empty */
+.item-actions:empty {
+    display: none;
+}
+
+.item-details p {
+	font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.item-details p span {
+    font-weight: normal;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-btn, .delete-btn {
+    width: 48%;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding: 20px 50px 20px 20px;
+}
+
+.page-square {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.page-square:hover {
+    background-color: #bbb;
+}
+
+/* Pagination active state */
+.page-square.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.category-form-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	flex: 1;
+}
+
+/* Update for category-form-container */
+.category-form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px;
+    box-sizing: border-box;
+    width: 40%;
+}
+
+.category-form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

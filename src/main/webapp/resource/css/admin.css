@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.admin-main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.admin-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.admin-welcome-msg {
+    margin: 50px 0;
+    color: #007bff;
+}

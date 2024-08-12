@@ -1,0 +1,267 @@
+/* Reset */
+body, html {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+.container {
+    margin-top: 120px;
+    padding: 0 20px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px;
+    background-color: #007bff; /* Đổi màu nền tab thành màu xanh */
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    color: #fff; /* Đổi màu chữ tab thành trắng */
+}
+
+.tab.active {
+    background-color: #0056b3; /* Màu nền tab hoạt động khi chọn */
+}
+
+/* Search field */
+.search-field {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.category {
+    flex: 0 0 auto;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-right: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: #ddd;
+}
+
+/* Items list */
+.items-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.item-box {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    align-items: center;
+}
+
+.item-info {
+    display: flex;
+    width: 100%;
+}
+
+.item-info .left {
+    flex: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-info img {
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.item-info .right {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-info .right .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.item-info .right .details p {
+    margin: 5px 0;
+}
+
+.item-info .right .details .price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.item-action {
+    text-align: right;
+}
+
+.item-action button {
+    padding: 10px;
+    background-color: #007bff; /* Đổi màu nền nút thêm vào giỏ hàng */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item-action button:hover {
+    background-color: #0056b3; /* Màu nền nút khi hover */
+}
+
+/* Order summary */
+.order-summary {
+    display: none;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.order-table th, .order-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Column sizes */
+.order-table .name-column {
+    width: 50%;
+}
+
+.order-table .price-column {
+    width: 15%;
+}
+
+.order-table .quantity-column {
+    width: 15%;
+}
+
+.order-table .total-column {
+    width: 15%;
+}
+
+.order-table .action-column {
+    width: 5%;
+}
+
+.quantity {
+    width: 50px; /* Adjust this width to ensure it fits well within the column */
+}
+
+/* Order table action buttons */
+.order-table td .delete-order {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.order-table td .delete-order .fa-trash {
+    color: #dc3545;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.order-table td .delete-order .fa-trash:hover {
+    color: #c82333;
+}
+
+/* Blink animation */
+@keyframes blink {
+    0% { background-color: #007bff; } /* Đổi màu nền của tab khi nháy lên */
+    50% { background-color: #00bfff; } /* Màu nháy sáng hơn */
+    100% { background-color: #007bff; }
+}
+
+.blink {
+    animation: blink 1s linear;
+}
+
+/* CSS for text area ghi chú (note-section) */
+.note-section {
+    margin-top: 20px;
+}
+
+.note-section label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#bill-note {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none;
+    height: 50px;
+}
+
+/* Buttons */
+.order-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-buttons button {
+	width: 50%;
+    padding: 10px;
+    margin: auto;
+    background-color: #007bff; /* Đổi màu nền nút thanh toán */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-buttons button:hover {
+    background-color: #0056b3; /* Màu nền nút khi hover */
+}
+
+tfoot .total {
+    font-weight: bold;
+}

@@ -1,0 +1,278 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.product-main-container {
+    display: flex;
+    height: calc(100% - 90px); /* Adjust height to fit content */
+    width: 100%;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    flex: 1;
+}
+
+.product-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.add-btn i {
+    margin-right: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.product-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(33.33% - 10px); /* 33.33% width minus gap for 3 items per row */
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 180px; /* Adjust height as needed */
+}
+
+.item-top {
+    display: flex;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 90px;
+    height: 110px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details p {
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.item-details p span {
+    font-weight: normal;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.update-btn, .delete-btn {
+    flex: 1;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.update-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Background colors for item statuses */
+.background-green {
+    background-color: #d4edda; /* Light green */
+}
+
+.background-red {
+    background-color: #f8d7da; /* Light red */
+}
+
+.background-yellow {
+    background-color: #fff3cd; /* Light yellow */
+}
+
+/* Ensure item-actions hides properly when empty */
+.item-actions:empty {
+    display: none;
+}
+
+/* Additional styles for price alignment */
+.price-row {
+    display: flex;
+    justify-content: flex-start; /* Add space between price sections */
+    gap: 30px; /* Adjust gap as needed for spacing */
+    margin: 7px 0 7px 0;
+}
+
+.price-row p {
+    margin: 0;
+}
+
+.price-row p span {
+    font-weight: normal; /* Ensure price values are normal weight */
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding: 20px 50px 20px 20px;
+}
+
+.page-square {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.page-square:hover {
+    background-color: #bbb;
+}
+
+/* Pagination active state */
+.page-square.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Update for category-form-container */
+.product-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+/* Update for product-form-container */
+.product-form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    box-sizing: border-box;
+    width: 50%;
+    max-height: 450px; /* Adjust the max-height as needed */
+    overflow-y: auto; /* Enable vertical scroll */
+}
+
+.product-form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
